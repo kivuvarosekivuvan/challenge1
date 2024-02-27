@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JiweStudios</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        .dropdown-menu {
+            top: 1.5rem; 
+            width: 90%;
+        }
+        .dropdown-menu li a{
+          padding-left: 20px;
+        }
+        .active-bar {
+            border-bottom: 2px solid rgb(255, 166, 0);
+            width: 100px;
+            @media (max-width: 767px) { 
+               width: 50px; 
+    }
+        }
+        .bg-orange-500 {
+    background-color: #D35A27;
+  }
+  
+    </style>
+</head>
+<body class="bg-black">
+    
+    <nav class="bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-9">
+            <div class="flex flex-col sm:flex-row items-center justify-between h-20 sm:h-18">
+                <div class="flex items-center space-x-2 sm:space-x-10">
+                    <img src="./images/JiweStudios.png" alt="Jiwe Logo" class="w-13 h-6 sm:w-15 sm:h-10">
+                    <div class="sm:hidden flex items-center space-x-2">
+                        <button class="text-white focus:outline-none dropdown-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <ul class="hidden bg-gray-800 text-white py-2 mt-4 rounded-md shadow-lg z-10 dropdown-menu">
+                            <li><a href="#">Browse Games</a></li>
+                            <li><a href="#">Game Jams</a></li>
+                            <li><a href="#">Upload A Game</a></li>
+                            <li><a href="#">Development Logs</a></li>
+                            <li><a href="#">Feed</a></li>
+                            <li><a href="#">Profile</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center mt-4 sm:mt-0 space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search for games and creators" class="px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 bg-black text-white" style="font-family: 'Inter', sans-serif;">
+                        <span class="absolute right-1 top-2 text-gray-500 sm:w-6 sm:h-6 md:w-4 md:h-4">
+                            <i class="fas fa-search text-xs sm:text-xxs md:text-xxs"></i>
+                        </span>
+                    </div>
+                    <div class="flex items-center mt-4 sm:mt-0 space-x-4">
+                        <span class="text-white">
+                            <i class="fas fa-bell"></i>
+                        </span>
+                        <div class="flex items-center relative group">
+                            <img src="./images/rose.jpeg" alt="Profile Photo" class="w-6 h-6 rounded-full">
+                            <span class="ml-2 text-xs text-white">Ann Wanjiku</span>
+                            <button class="ml-2 text-white focus:outline-none dropdown-toggle" onclick="toggleDropdown()">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul id="dropdown-menu" class="absolute hidden bg-gray-800 text-white py-2 mt-4 rounded-md shadow-lg z-10 dropdown-menu">
+                                <li><a href="#">View Profile</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden sm:flex justify-start items-center space-x-10 -mt-12 pb-6 ml-40">
+                <a href="#" class="text-xs font-bold text-white hover:underline">Browse Games</a>
+                <a href="#" class="text-xs font-bold text-white hover:underline">Game Jams</a>
+                <a href="#" class="text-xs font-bold text-white hover:underline">Upload A Game</a>
+                <a href="#" class="text-xs font-bold text-white hover:underline">Development Logs</a>
+                <a href="#" class="text-xs font-bold text-white hover:underline">Feed</a>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="relative">
+      <img src="./images/profile.jpg" alt="profile cover photo" class="w-full" height="200">      
+      <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -translate-y-2 translate-x-2 text-center z-5 flex flex-col items-center">
+        <div class="flex justify-center mt-4">
+          <img src="./images/rose.jpeg" alt="profile photo" class="rounded-full w-10 h-10 sm:w-32 sm:h-32 mb-2 sm:mb-3 ring-2 ring-red-900"></div>
+          <h1 class="text-white text-xs sm:text-base md:text-xl font-semibold">@AnnWanjiku</h1>        
+          <h1 class="text-white text-xs sm:text-base mb-1">You joined 5 months ago</h1>
+        <button class="bg-red-800 hover:bg-red-700 text-white font-semibold py-1 px-3 sm:py-1 sm:px-4 rounded text-xs sm:text-xxs sm:py-1 sm:px-1">
+          Edit Profile 
+        </button>
+        <p class="text-white sm:mt-8 font-semibold text-xs sm:text-xxs px-2 sm:px-0 sm:text-justify sm:w-200px">
+          24. Creator of <span class="text-yellow-500">#TRAVELLERS</span> here on Jiwe. The sky's the limit for <span class="text-yellow-500">#GameDevelopment</span>! Unleash your creative potential and make your wildest game become reality. <span class="text-yellow-500">#VideoGameDesign</span> <span class="text-yellow-500">#LevelDesign</span> <span class="text-yellow-500">#Gamedev</span>
+        </p>
+      </div>
+    </div>
+    
+    <div class="flex justify-center mt-10 sm:flex-wrap md:flex-wrap">
+      <div class="mr-4 mb-4 sm:mr-40 sm:mb-0">
+          <a href="#" class="text-white text-xs font-semibold sm:text-sm md:text-sm">API Keys</a>
+      </div>
+      <div class="mr-4 mb-4 sm:mr-40 sm:mb-0">
+          <a href="#" class="text-white text-xs font-semibold active-bar sm:text-sm md:text-sm sm:py-1 sm:px-2">Wallet</a>
+      </div>
+      <div class="mr-4 mb-4 sm:mr-40 sm:mb-0">
+          <a href="#" class="text-white text-xs font-semibold sm:text-sm md:text-sm">7 Followers</a>
+      </div>
+      <div>
+          <a href="#" class="text-white text-xs font-semibold sm:text-sm md:text-sm">32 Following</a>
+      </div>
+  </div>
+
+    <div class="flex justify-center mt-6 bg-gray-900">
+      <div class="text-white text-center mt-5">
+          <p>Your Celo wallet is not linked</p>
+          <button class="bg-orange-500 hover:bg-red-600 text-white text-sm py-2 px-24 rounded mt-5">+ Add or Link Wallet</button>
+          <div class="bg-black mt-4 px-4 py-2 mb-4">
+            <p class="text-white text-sm">Cowrie Balance</p>
+            <p class="text-white text-xl">
+              <img src="./images/snail.png" alt="Cowrie Balance" class="mx-auto w-10 h-10 mt-4 mb-4">
+            </p>
+            <p class="font-semibold">123.00</p>
+          </div>
+      </div>
+    </div>
+
+
+    <div>
+      <footer class="py-6 bg-black">
+        <div class="container mx-auto px-4 flex justify-center">
+            <ul class="flex space-x-8">
+                <li>
+                    <a href="#" class="text-sm text-white">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-sm text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-sm text-white">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-xs text-white">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#" class="text-xs text-white">FAQ</a>
+                </li>
+                <li>
+                    <a href="#" class="text-xs text-white">BLOG</a>
+                </li>
+                <li>
+                    <a href="#" class="text-xs text-white">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container mx-auto px-4 flex justify-center mt-6">
+          <p class="text-xs text-white">&copy; Jiwe.io</p>
+          <a href="#" class="text-xs text-white ml-2">Directory</a>
+          <a href="#" class="text-xs text-white ml-2">Terms</a>
+          <a href="#" class="text-xs text-white ml-2">Privacy</a>
+          <a href="#" class="text-xs text-white ml-2">Cookies</a>
+      </div>
+    </footer>
+    </div>
+
+
+      
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const dropdownToggle = document.querySelector(".dropdown-toggle");
+            const dropdownMenu = document.querySelector(".dropdown-menu");
+
+            dropdownToggle.addEventListener("click", function() {
+                dropdownMenu.classList.toggle("hidden");
+            });
+
+            dropdownToggle.addEventListener("blur", function() {
+                dropdownMenu.classList.add("hidden");
+            });
+        });
+
+        $(document).ready(function() {
+        $('.dropdown-toggle').click(function() {
+            $('.dropdown-menu').toggle();
+        });
+    });
+        
+    function toggleDropdown() {
+        var dropdownMenu = document.getElementById("dropdown-menu");
+        dropdownMenu.classList.toggle("hidden");
+    }
+    </script>
+</body>
+</html>
